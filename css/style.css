@@ -109,30 +109,6 @@ li {
     box-shadow: 0 0 10px rgba(255, 255, 0, 0.1);
     outline: none;
 }
-.tablewrapper {
-    position: relative;
-}
-.table {
-    display: table;
-    position: relative
-}
-.row {
-    display: table-row;
-}
-.cell {
-    display: table-cell;
-}
-.cell.empty
-{
-    border: none;
-    width: 50px;
-}
-.cell.rowspanned {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100px;
-}
 .button {
     background-color: #008CBA;
     border: none;
@@ -144,4 +120,20 @@ li {
     display: inline-block;
     font-size: 16px;
     margin-bottom: 10px;
+}
+
+
+.container {
+    display: -webkit-flex;
+    display: flex;
+}
+section {
+    width:276px;
+}
+.flex-column {
+    -webkit-flex: 1;
+    flex: 1;
+}
+.avatar{
+    padding-right: 5px;
 }

@@ -14,7 +14,8 @@
     <div>
         <input type="text" width="95%" class="form-input" placeholder="email" ng-model="formEmail">
         <textarea cols="40" rows="4" class="form-input" placeholder="Comment..." ng-model="formComment"></textarea>
-        <button class="button" ng-click="addComment()">Add Comment</button><br>
+        <button class="button" ng-click="addComment()">Add Comment</button>
+        <br>
     </div>
     <input type="text" class="form-input" id="query" ng-model="query" onfocus="pxtrack.emit('counter', '1')"/>
     <select ng-model="orderList" onchange="pxtrack.emit('counter', '2')">
@@ -23,22 +24,14 @@
     </select>
     <ul id="notebook_ul">
         <li ng-repeat="item in comments | filter:query | orderBy: orderList">
-            <div class="tablewrapper">
-                <div class="table">
-                    <div class="row">
-                        <div class="cell rowspanned">
-                            <img gravatar-src="comment.mail" gravatar-size="37">
-                        </div>
-                        <div class="cell">
-                            {{item.mail}}
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="cell empty"></div>
-                        <div class="cell colspan">
-                            {{item.comment}}
-                        </div>
-                    </div>
+            <div class="container">
+                <div class="avatar">
+                    <img gravatar-src="comment.mail" gravatar-size="37">
+                </div>
+                <div class="flex-column">
+                    <section>{{item.mail}}</section>
+
+                    <section>{{item.comment}}</section>
                 </div>
             </div>
         </li>
