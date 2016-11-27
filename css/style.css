@@ -98,7 +98,7 @@ li {
     box-shadow: 0 0 10px rgba(255, 255, 0, 0.1);
     outline: none;
 }
-.button {
+.flex-form-btn {
     background-color: #008CBA;
     border: none;
     float: right;
@@ -118,6 +118,14 @@ li {
 }
 section {
     width:276px;
+}
+.flex-form-container {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+.flex-form-input {
+    flex: 1;
+    -webkit-flex: 1;
 }
 .flex-column {
     -webkit-flex: 1;

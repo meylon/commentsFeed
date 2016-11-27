@@ -11,10 +11,10 @@
 </head>
 <body>
 <div id="comments" ng-app="comments" ng-controller="CommentListCtrl">
-    <div>
-        <input type="text" width="95%" class="form-input" placeholder="email" ng-model="formEmail">
-        <textarea cols="40" rows="4" class="form-input" placeholder="Comment..." ng-model="formComment"></textarea>
-        <button class="button" ng-click="addComment()">Add Comment</button>
+    <div class="flex-form-container">
+        <input type="text" width="95%" class="form-input flex-form-input" placeholder="email" ng-model="formEmail">
+        <textarea cols="40" rows="4" class="form-input flex-form-input" placeholder="Comment..." ng-model="formComment"></textarea>
+        <button  class="flex-form-btn" ng-click="addComment()">Add Comment</button>
         <br>
     </div>
     <input type="text" class="form-input" id="query" ng-model="query" onfocus="pxtrack.emit('counter', '1')"/>
