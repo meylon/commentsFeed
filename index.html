@@ -21,6 +21,8 @@
     <select ng-model="orderList" onchange="pxtrack.emit('counter', '2')">
         <option value="mail">By mail</option>
         <option value="comment">Comment</option>
+        <option value="-mail">Newest</option>
+        <option value="mail">Oldest</option>
     </select>
     <ul id="notebook_ul">
         <li ng-repeat="item in comments | filter:query | orderBy: orderList">
